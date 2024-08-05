@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int factorial(int n) {
+    int result = 1;
+    while (n > 1) {
+        result *= n--;
+    }
+    return result;
+}
+
+int main() {
+    int number;
+    printf("Enter a positive integer: ");
+    scanf("%d", &number);
+
+    if (number < 0) {
+        printf("Factorial of a negative number doesn't exist.\n");
+    } else {
+        printf("Factorial of %d is %d\n", number, factorial(number));
+    }
+
+    return 0;
+}
